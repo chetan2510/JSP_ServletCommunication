@@ -1,0 +1,23 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<!--Also kown as Deployment discriptor, careful with how a servlet is name and accessing the classes -->
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+<!--  To access the class, notice how we named the servlet classes-->
+ <servlet>
+   <servlet-name>beerName</servlet-name>
+   <servlet-class>web.GetBeerOptionsServlet</servlet-class>
+ </servlet>
+
+<!--    Over here the request comes at the url /SelectBeer.do, you can name it anything and this links -->
+<!--    to the servlet class, see this servlet mapping name matches with the servlet defined above.-->
+  <servlet-mapping>
+    <servlet-name>beerName</servlet-name>
+    <url-pattern>/SelectBeer.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
